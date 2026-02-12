@@ -66,7 +66,7 @@ export default function ValentinePage() {
           className="rounded-[3rem] bg-white p-8 shadow-xl border-4 border-[#F7CAD0] z-10 max-w-lg w-full"
         >
           <h1 className="text-4xl font-serif text-[#5C3D2E] mb-6">
-            Yay! See you on the 14th, Amit! ❤️
+            Yay! I knew you'll say yes! ❤️
           </h1>
 
           <div className="w-full flex justify-center items-center">
@@ -104,9 +104,6 @@ export default function ValentinePage() {
         <div className="mb-8 space-y-2">
            <p className="text-[#BC6C74] text-lg md:text-xl font-medium">
             I'm really sorry for today. 😔
-          </p>
-          <p className="text-[#9D4444] text-xl md:text-2xl font-serif font-bold">
-            I love you.
           </p>
         </div>
 
