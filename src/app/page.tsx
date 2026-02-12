@@ -71,7 +71,7 @@ export default function ValentinePage() {
           </div>
 
           
-          <p className="mt-6 text-[#9D4444] font-medium italic">Best decision you ever made!</p>
+          <p className="mt-6 text-[#9D4444] font-medium italic ">Best decision you ever made!</p>
         </motion.div>
       </main>
     );
