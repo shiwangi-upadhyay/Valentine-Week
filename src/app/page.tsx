@@ -62,16 +62,14 @@ export default function ValentinePage() {
           <h1 className="text-4xl font-serif text-[#5C3D2E] mb-6">Yay! See you on the 14th, Diya! ❤️</h1>
           
           {/* Funny Reaction Video Embed */}
-          <div className="relative overflow-hidden w-full pt-[56.25%] rounded-2xl shadow-inner">
-            <iframe 
-              className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/n9u67InYt8M?autoplay=1" 
-              title="Funny Celebration"
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowFullScreen
-            ></iframe>
+          <div className="w-full flex justify-center items-center">
+            <img
+              src="/video/dare-aggie-dare-aggie-bunny.webp"
+              alt="Funny Celebration"
+              className="rounded-2xl shadow-inner max-w-full h-auto"
+            />
           </div>
+
           
           <p className="mt-6 text-[#9D4444] font-medium italic">Best decision you ever made!</p>
         </motion.div>
