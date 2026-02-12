@@ -31,21 +31,21 @@ export default function ValentinePage() {
     });
   };
 
-  const Petal = ({ i }: { i: number }) => (
+  const RosePetal = ({ i }: { i: number }) => (
     <motion.div
       initial={{ y: -100, x: Math.random() * 100 + "%", opacity: 0, rotate: 0 }}
       animate={{
         y: "110vh",
-        opacity: [0, 0.8, 0.8, 0],
+        opacity: [0, 1, 1, 0],
         rotate: 360,
       }}
       transition={{
-        duration: Math.random() * 5 + 7,
+        duration: Math.random() * 4 + 6,
         repeat: Infinity,
-        delay: i * 0.4,
+        delay: i * 0.3,
         ease: "linear",
       }}
-      className="fixed pointer-events-none z-50 text-2xl"
+      className="fixed pointer-events-none z-50 text-3xl"
       style={{ left: `${Math.random() * 100}%` }}
     >
       🌸
@@ -56,19 +56,21 @@ export default function ValentinePage() {
 
   if (hasAccepted) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center bg-[#FFF5F6] p-6 text-center">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-[#FFF5F6] p-6 text-center overflow-hidden">
+        {[...Array(30)].map((_, i) => (
+          <RosePetal key={i} i={i} />
+        ))}
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           className="rounded-[3rem] bg-white p-8 shadow-xl border-4 border-[#F7CAD0] z-10 max-w-lg w-full"
         >
           <h1 className="text-4xl font-serif text-[#5C3D2E] mb-6">
-            Yay! See you on the 14th, Shalu! ❤️
+            Yay! See you on the 14th, Amit! ❤️
           </h1>
 
-          {/* Funny Reaction Video Embed */}
           <div className="w-full flex justify-center items-center">
-            <img
+             <img
               src="/video/dare-aggie-dare-aggie-bunny.webp"
               alt="Funny Celebration"
               className="rounded-2xl shadow-inner max-w-full h-auto"
@@ -76,7 +78,7 @@ export default function ValentinePage() {
           </div>
 
           <p className="mt-6 text-[#9D4444] font-medium italic">
-            Best decision you ever made!
+            I love you so much!
           </p>
         </motion.div>
       </main>
@@ -85,20 +87,30 @@ export default function ValentinePage() {
 
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center bg-[#FFF5F6] overflow-hidden p-4">
-      {[...Array(20)].map((_, i) => (
-        <Petal key={i} i={i} />
+      {/* Rose Shower */}
+      {[...Array(30)].map((_, i) => (
+        <RosePetal key={i} i={i} />
       ))}
 
-      <section className="z-10 flex flex-col items-center w-full max-w-4xl bg-white/80 backdrop-blur-sm p-10 md:p-16 rounded-[3.5rem] shadow-sm border border-white text-center">
+      <section className="z-10 flex flex-col items-center w-full max-w-4xl bg-white/90 backdrop-blur-sm p-10 md:p-16 rounded-[3.5rem] shadow-sm border border-white text-center">
         <div className="bg-[#FFE5E9] text-[#BC6C74] px-6 py-2 rounded-full text-[12px] font-bold tracking-[0.3em] uppercase mb-8">
           Valentine's Day 2026
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-serif text-[#5C3D2E] leading-tight mb-6">
-          Hey Shalu!
+        <h1 className="text-5xl md:text-7xl font-serif text-[#5C3D2E] leading-tight mb-4">
+          Hey Sir!
         </h1>
+        
+        <div className="mb-8 space-y-2">
+           <p className="text-[#BC6C74] text-lg md:text-xl font-medium">
+            I'm really sorry for today. 😔
+          </p>
+          <p className="text-[#9D4444] text-xl md:text-2xl font-serif font-bold">
+            I love you.
+          </p>
+        </div>
 
-        <p className="text-[#9D4444] text-2xl md:text-3xl font-serif italic mb-12">
+        <p className="text-[#5C3D2E] text-2xl md:text-3xl font-serif italic mb-12">
           Will you be my Valentine? 🌹
         </p>
 
@@ -139,7 +151,7 @@ export default function ValentinePage() {
       </section>
 
       <footer className="absolute bottom-6 text-[#BC6C74]/40 text-[10px] font-bold tracking-[0.3em] uppercase">
-        Specifically for Shalu 💖
+        Specifically for Sir 💖
       </footer>
     </main>
   );
